@@ -62,13 +62,6 @@ provide('totalPrice', totalPrice)
 </script>
 
 <template>
-  <header class="border-b bg-white sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between">
-      <h1 class="text-xl font-bold">Chaussures Élégance</h1>
-      <a href="#" class="hover:text-blue-600">Continuer les achats</a>
-    </div>
-  </header>
-
   <main class="max-w-4xl mx-auto px-4 py-10">
     <Title />
     <div class="space-y-6">

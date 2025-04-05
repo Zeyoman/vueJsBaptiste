@@ -1,11 +1,35 @@
-<script setup></script>
+<script setup>
+import Category from '@/components/BigCategory/Category.vue'
+
+const categories = [
+    {
+        id: 1,
+        name: 'Homme',
+        description: 'Découvrez notre sélection de vêtements pour homme.'
+    },
+    {
+        id: 2,
+        name: 'Femme',
+        description: 'Découvrez notre sélection de vêtements pour femme.'
+    },
+    {
+        id: 3,
+        name: 'Enfant',
+        description: 'Découvrez notre sélection de vêtements pour enfant.'
+    },
+    {
+        id: 4,
+        name: 'Bébé',
+        description: 'Découvrez notre sélection de vêtements pour bébé.'
+    }
+]
+</script>
 
 <template>
-    <a href="#" class="block border rounded-2xl overflow-hidden shadow hover:shadow-md transition">
-        <img src="https://via.placeholder.com/400x250" alt="Ville" class="w-full h-48 object-cover">
-        <div class="p-4">
-            <h3 class="font-semibold text-lg">Chaussures de Ville</h3>
-            <p class="text-gray-600 text-sm">Classiques, élégantes pour vos journées de travail</p>
-        </div>
-    </a>
+    <Category v-for="categorie in categories"
+        :title="categorie.name"
+        :description="categorie.description"
+        :key="categorie.id"
+        @get-category="getCategory(categorie.name)"
+    />
 </template>
